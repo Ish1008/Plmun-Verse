@@ -53,7 +53,7 @@
   <div class="wrap">
     <div class="org-grid">
 
-      <div class="org-card" data-category="academic">
+      <div class="org-card" data-id="org-01" data-category="academic">
         <div class="org-top">
           <span class="org-mark">OA</span>
           <span class="cat-tag cat-academic">Academic</span>
@@ -62,11 +62,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>Recruiting</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="cultural">
+      <div class="org-card" data-id="org-02" data-category="cultural">
         <div class="org-top">
           <span class="org-mark">OB</span>
           <span class="cat-tag cat-cultural">Cultural</span>
@@ -75,11 +75,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>12 events</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="sports">
+      <div class="org-card" data-id="org-03" data-category="sports">
         <div class="org-top">
           <span class="org-mark">OC</span>
           <span class="cat-tag cat-sports">Sports</span>
@@ -88,11 +88,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>Recruiting</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="tech">
+      <div class="org-card" data-id="org-04" data-category="tech">
         <div class="org-top">
           <span class="org-mark">OD</span>
           <span class="cat-tag cat-tech">Tech</span>
@@ -101,11 +101,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>8 events</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="community">
+      <div class="org-card" data-id="org-05" data-category="community">
         <div class="org-top">
           <span class="org-mark">OE</span>
           <span class="cat-tag cat-community">Community</span>
@@ -114,11 +114,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>Recruiting</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="academic">
+      <div class="org-card" data-id="org-06" data-category="academic">
         <div class="org-top">
           <span class="org-mark">OF</span>
           <span class="cat-tag cat-academic">Academic</span>
@@ -127,11 +127,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>5 events</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="cultural">
+      <div class="org-card" data-id="org-07" data-category="cultural">
         <div class="org-top">
           <span class="org-mark">OG</span>
           <span class="cat-tag cat-cultural">Cultural</span>
@@ -140,11 +140,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>Recruiting</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="tech">
+      <div class="org-card" data-id="org-08" data-category="tech">
         <div class="org-top">
           <span class="org-mark">OH</span>
           <span class="cat-tag cat-tech">Tech</span>
@@ -153,11 +153,11 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>3 events</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
-      <div class="org-card" data-category="community">
+      <div class="org-card" data-id="org-09" data-category="community">
         <div class="org-top">
           <span class="org-mark">OI</span>
           <span class="cat-tag cat-community">Community</span>
@@ -166,13 +166,98 @@
         <p>Placeholder description of what this organization is about and who it's for.</p>
         <div class="org-foot">
           <span>Recruiting</span>
-          <a href="#" class="btn btn-small">View</a>
+          <a href="#" class="btn btn-small view-btn">View</a>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<div class="modal-overlay" id="orgModal">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+    <div class="modal-head">
+      <span class="org-mark-lg" id="modalMark"></span>
+      <div>
+        <h2 id="modalName"></h2>
+        <div class="org-meta">
+          <span class="cat-tag" id="modalCatTag"></span>
+          <span id="modalStatus"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <a href="#" class="btn btn-primary">Follow this org</a>
+      <a href="#" class="btn btn-ghost apply-btn">Apply now</a>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-block">
+        <h3>About</h3>
+        <p id="modalAbout1"></p>
+        <p id="modalAbout2"></p>
+      </div>
+
+      <div class="modal-block">
+        <h3>Upcoming events</h3>
+        <div id="modalEvents"></div>
+      </div>
+
+      <div class="modal-block">
+        <h3>Org info</h3>
+        <div class="info-row"><span>Members</span><span id="modalMembers"></span></div>
+        <div class="info-row"><span>Founded</span><span id="modalFounded"></span></div>
+        <div class="info-row"><span>Email</span><span id="modalEmail"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="applyModal">
+  <div class="modal-card">
+    <button class="modal-close" id="applyModalClose" aria-label="Close">&times;</button>
+
+    <span class="eyebrow" style="color:var(--forest-700);">Applying to</span>
+    <h2 class="modal-title" id="applyOrgName"></h2>
+
+    <form id="applyForm">
+      <div class="field">
+        <label for="applyName">Full name</label>
+        <input type="text" id="applyName" name="applyName" placeholder="Juan Dela Cruz" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="applyStudentNum">Student number</label>
+          <input type="text" id="applyStudentNum" name="applyStudentNum" required>
+        </div>
+        <div class="field">
+          <label for="applyCourse">Course & year</label>
+          <input type="text" id="applyCourse" name="applyCourse" placeholder="e.g. BSIT 2nd Year">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="applyEmail">PLMun email</label>
+        <input type="email" id="applyEmail" name="applyEmail" placeholder="juandelacruz@plmun.edu.ph" required>
+      </div>
+
+      <div class="field">
+        <label for="applyWhy">Why do you want to join?</label>
+        <textarea id="applyWhy" name="applyWhy" rows="4" placeholder="Tell the org a bit about yourself"></textarea>
+      </div>
+
+      <p class="modal-note">This is a demo form — applications aren't actually submitted yet.</p>
+
+      <div class="modal-form-actions">
+        <button type="submit" class="btn btn-primary btn-block">Submit application</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <footer>
   <div class="wrap foot-inner">
@@ -182,23 +267,146 @@
 </footer>
 
 <script>
+  // Filler data — matches org-01.html … org-09.html
+  const orgData = {
+    "org-01": { mark:"OA", name:"Org Name 01", cat:"academic",  catLabel:"Academic",  status:"Recruiting", members:"48", founded:"2015", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 01. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-02": { mark:"OB", name:"Org Name 02", cat:"cultural",  catLabel:"Cultural",  status:"12 events", members:"63", founded:"2012", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 02. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-03": { mark:"OC", name:"Org Name 03", cat:"sports",    catLabel:"Sports",    status:"Recruiting", members:"35", founded:"2018", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 03. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-04": { mark:"OD", name:"Org Name 04", cat:"tech",      catLabel:"Tech",      status:"8 events", members:"52", founded:"2019", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 04. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-05": { mark:"OE", name:"Org Name 05", cat:"community", catLabel:"Community", status:"Recruiting", members:"40", founded:"2016", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 05. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-06": { mark:"OF", name:"Org Name 06", cat:"academic",  catLabel:"Academic",  status:"5 events", members:"29", founded:"2020", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 06. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-07": { mark:"OG", name:"Org Name 07", cat:"cultural",  catLabel:"Cultural",  status:"Recruiting", members:"57", founded:"2011", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 07. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-08": { mark:"OH", name:"Org Name 08", cat:"tech",      catLabel:"Tech",      status:"3 events", members:"22", founded:"2021", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 08. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] },
+    "org-09": { mark:"OI", name:"Org Name 09", cat:"community", catLabel:"Community", status:"Recruiting", members:"44", founded:"2017", email:"placeholder@plmun.edu.ph",
+      about:["This is placeholder copy for Org Name 09. A short description of the organization's purpose, activities, and who it's for goes here once real org details are added.","Swap this section out with the org's actual mission statement, history, and what members can expect when they join."],
+      events:[{day:"14",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 2:00 PM"},{day:"22",mon:"Sep",title:"Placeholder Event Title",loc:"Placeholder location · 10:00 AM"}] }
+  };
+
+  // Filtering
   const pills = document.querySelectorAll('.pill');
   const cards = document.querySelectorAll('.org-card');
 
   pills.forEach(pill => {
     pill.addEventListener('click', (e) => {
       e.preventDefault();
-
       pills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-
       const filter = pill.dataset.filter;
-
       cards.forEach(card => {
         const match = filter === 'all' || card.dataset.category === filter;
         card.style.display = match ? '' : 'none';
       });
     });
+  });
+
+  // Modal
+  const modal = document.getElementById('orgModal');
+  const modalClose = document.getElementById('modalClose');
+  let currentOrgId = null;
+
+  function openModal(id) {
+    const org = orgData[id];
+    if (!org) return;
+    currentOrgId = id;
+
+    document.getElementById('modalMark').textContent = org.mark;
+    document.getElementById('modalName').textContent = org.name;
+    document.getElementById('modalStatus').textContent = org.status;
+    document.getElementById('modalMembers').textContent = org.members;
+    document.getElementById('modalFounded').textContent = org.founded;
+    document.getElementById('modalEmail').textContent = org.email;
+    document.getElementById('modalAbout1').textContent = org.about[0];
+    document.getElementById('modalAbout2').textContent = org.about[1];
+
+    const catTag = document.getElementById('modalCatTag');
+    catTag.textContent = org.catLabel;
+    catTag.className = 'cat-tag cat-' + org.cat;
+
+    const eventsWrap = document.getElementById('modalEvents');
+    eventsWrap.innerHTML = org.events.map(ev => `
+      <div class="event-item">
+        <div class="event-date"><span class="day">${ev.day}</span><span class="mon">${ev.mon}</span></div>
+        <div class="event-info"><strong>${ev.title}</strong><span>${ev.loc}</span></div>
+      </div>
+    `).join('');
+
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.org-card');
+      openModal(card.dataset.id);
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { closeModal(); closeApplyModal(); }
+  });
+
+  // Apply modal
+  const applyModal = document.getElementById('applyModal');
+  const applyModalClose = document.getElementById('applyModalClose');
+  const applyForm = document.getElementById('applyForm');
+
+  function openApplyModal() {
+    if (!currentOrgId) return;
+    const org = orgData[currentOrgId];
+    document.getElementById('applyOrgName').textContent = org.name;
+    closeModal();
+    applyModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeApplyModal() {
+    applyModal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.apply-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openApplyModal();
+    });
+  });
+
+  applyModalClose.addEventListener('click', closeApplyModal);
+  applyModal.addEventListener('click', (e) => {
+    if (e.target === applyModal) closeApplyModal();
+  });
+
+  applyForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // No backend yet — this is where a real submit (fetch/POST) would go.
+    closeApplyModal();
+    applyForm.reset();
   });
 </script>
 
