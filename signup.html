@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up — PLMun Verse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-mark">
+        <img src="logo1.png" alt="Logo">
+      </span>
+      <span>PLMUN VERSE</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="about.html">About</a>
+      <a href="signin.html">Sign in</a>
+      <a href="signup.html" class="active">Sign up</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Join PLMun Verse</span>
+    <h1>Create your account</h1>
+    <p class="lede">One account gets you every org on campus — follow the ones you like, and apply the moment they post.</p>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="wrap">
+    <div class="auth-card">
+
+      <div class="role-toggle">
+        <label class="role-option">
+          <input type="radio" name="role" value="student" checked>
+          <span>I'm a student</span>
+        </label>
+        <label class="role-option">
+          <input type="radio" name="role" value="org">
+          <span>I'm an org officer</span>
+        </label>
+      </div>
+
+      <form action="#" method="post">
+        <div class="field-row">
+          <div class="field">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+          </div>
+          <div class="field">
+            <label for="studentnum">Student number</label>
+            <input type="text" id="studentnum" name="studentnum" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">PLMun email</label>
+          <input type="email" id="email" name="email" placeholder="juandelacruz@plmun.edu.ph" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" required>
+          </div>
+          <div class="field">
+            <label for="confirm">Confirm password</label>
+            <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required>
+          </div>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" required>
+          <span>I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block">Create account</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>PLMun Verse — Pamantasan ng Lungsod ng Muntinlupa</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+  const roleOptions = document.querySelectorAll('.role-option');
+
+  function updateRoleSelection() {
+    roleOptions.forEach(option => {
+      const input = option.querySelector('input');
+      option.classList.toggle('is-selected', input.checked);
+    });
+  }
+
+  roleOptions.forEach(option => {
+    option.querySelector('input').addEventListener('change', updateRoleSelection);
+  });
+
+  updateRoleSelection();
+</script>
+
+</body>
+</html>
